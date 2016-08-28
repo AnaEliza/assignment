@@ -1,0 +1,10 @@
+{
+	"gameId" : 483159,
+	"knight" : {
+		"name" : "Sir. Russell Jones of Alberta",
+		"attack" : 2,
+		"armor" : 7,
+		"agility" : 3,
+		"endurance" : 8
+	}
+}
