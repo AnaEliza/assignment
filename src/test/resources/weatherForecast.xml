@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <report>
-	<time>Sat Aug 27 2016 16:21:30 GMT+0000 (UTC)</time>
-	<coords>
-		<x>3916.234</x>
-		<y>169.914</y>
-		<z>6.33</z>
-	</coords>
-	<code>NMR</code>
-	<message>Another day of everyday normal regular weather, business as
-		usual, unless itâ€™s going to be like the time of the Great Paprika
-		Mayonnaise Incident of 2014, that was some pretty nasty stuff.
-	</message>
-	<varX-Rating>8</varX-Rating>
+    <time>Sat Aug 27 2016 16:21:30 GMT+0000 (UTC)</time>
+    <coords>
+        <x>3916.234</x>
+        <y>169.914</y>
+        <z>6.33</z>
+    </coords>
+    <code>NMR</code>
+    <message>Another day of everyday normal regular weather, business as
+        usual, unless itâ€™s going to be like the time of the Great Paprika
+        Mayonnaise Incident of 2014, that was some pretty nasty stuff.
+    </message>
+    <varX-Rating>8</varX-Rating>
 </report>

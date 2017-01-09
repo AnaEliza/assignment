@@ -1,7 +1,6 @@
 package com.github.anaeliza.dragonsofmugloar.services;
 
 import java.io.IOException;
-import java.io.InputStream;
 
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -12,7 +11,7 @@ import com.github.anaeliza.dragonsofmugloar.domain.Result;
 public class GameService extends Service {
     
     private static final String START_GAME_URL = "api/game/";
-    private static final String SEND_DRAGON_URL = "api/game/{gameId}/solution";
+    private static final String SEND_DRAGON_URL = "api/game/%d/solution";
     
     private static final ObjectMapper mapper = new ObjectMapper();
     
@@ -32,10 +31,9 @@ public class GameService extends Service {
     public Result sendDragon(Battle battle) {
         try {
             String dragon = mapper.writeValueAsString(battle.dragon());
-            String serviceUrl = SEND_DRAGON_URL.replaceAll("\\{gameId\\}", battle.gameId() + "");
+            String serviceUrl = String.format(SEND_DRAGON_URL, battle.gameId());
             
-            InputStream is = put(serviceUrl, dragon);
-            return mapper.readValue(is, Result.class);
+            return mapper.readValue(put(serviceUrl, dragon), Result.class);
         } catch (IOException e) {
             throw new RuntimeException("Error while trying to start a battle", e);
         }
