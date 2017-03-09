@@ -2,6 +2,7 @@ package com.github.anaeliza.dragonsofmugloar.services;
 
 import java.io.IOException;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
@@ -18,6 +19,7 @@ public class GameService extends Service {
     static {
         mapper.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true);
         mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, true);
+        mapper.configure(DeserializationFeature.READ_ENUMS_IGNORING_CASE, true);
     }
     
     public Battle startBattle() {

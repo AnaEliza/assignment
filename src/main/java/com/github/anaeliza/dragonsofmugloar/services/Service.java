@@ -6,11 +6,11 @@ import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public abstract class Service {
+abstract class Service {
     
     private static final String BASE_URL = "http://www.dragonsofmugloar.com/";
     
-    protected InputStream get(String serviceUrl) {
+    InputStream get(String serviceUrl) {
         try {
             URL url = new URL(BASE_URL + serviceUrl);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -21,7 +21,7 @@ public abstract class Service {
         }
     }
     
-    protected InputStream put(String serviceUrl, String data) {
+    InputStream put(String serviceUrl, String data) {
         try {
             URL url = new URL(BASE_URL + serviceUrl);
             HttpURLConnection con = (HttpURLConnection) url.openConnection();

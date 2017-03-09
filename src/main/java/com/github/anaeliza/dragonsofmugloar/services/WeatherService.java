@@ -5,7 +5,6 @@ import java.util.stream.IntStream;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 
-import com.github.anaeliza.dragonsofmugloar.domain.Battle;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
